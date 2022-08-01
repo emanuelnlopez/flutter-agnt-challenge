@@ -1,3 +1,8 @@
 {
-    "stripePublishableKey": ""
+    "endpoints": {
+        "creditCardsUrl": "https://api.stripe.com/v1/customers/{customerId}/sources",
+        "customersUrl": "https://api.stripe.com/v1/customers"
+    },
+    "stripePublishableKey": "pk_test_51LPVAQAI5bDwbD3UxacyEmFzq0ekBX0qdYVQW0tuG2qfYaPYck24qShQoizr294lK5wuUHNct8sfIYFuj8Q0nfHH00xXjTkItq",
+    "stripeSecretKey": "sk_test_51LPVAQAI5bDwbD3Uaq0YVEkaHy00UC1cSCnzCD85x0IunaXqQLyO9hmHujqEIqoOaQeXPs0MLtJlpLNmbKwhiQma00UTvqtZNq"
 }
