@@ -9,5 +9,7 @@ dependencies:
   dartz: ^0.10.1
 
 dev_dependencies:
+  build_runner: ^2.2.0
   lints: ^2.0.0
+  mockito: ^5.3.0
   test: ^1.16.0
