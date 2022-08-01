@@ -40,7 +40,9 @@ class CustomerNetworkRepository implements CustomerRepository {
       throw Exception();
     }
 
-    final body = json.decode(response.body);
+    final body = json.decode(
+      utf8.decode(response.bodyBytes),
+    );
 
     return NetworkCustomer.fromDynamicList(body['data']);
   }
