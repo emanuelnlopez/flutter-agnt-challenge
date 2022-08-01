@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:domain/domain.dart';
 
-class FetchCustomerCreditCardsUseCase extends UseCase<List<CreditCard>> {
+class FetchCustomerCreditCardsUseCase extends UseCase<List<CreditCardLight>> {
   FetchCustomerCreditCardsUseCase({
     required CreditCardRepository creditCardRepository,
   }) : _creditCardRepository = creditCardRepository;
@@ -9,7 +9,7 @@ class FetchCustomerCreditCardsUseCase extends UseCase<List<CreditCard>> {
   final CreditCardRepository _creditCardRepository;
 
   @override
-  Future<Either<Failure, List<CreditCard>>> execute(
+  Future<Either<Failure, List<CreditCardLight>>> execute(
       {required Map<String, dynamic> arguments}) async {
     try {
       final result = await _creditCardRepository.fetchCustomerCreditCards(

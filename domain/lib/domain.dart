@@ -1,5 +1,6 @@
 export 'src/model/config.dart';
 export 'src/model/credit_card.dart';
+export 'src/model/credit_card_light.dart';
 export 'src/model/customer.dart';
 export 'src/model/endpoints.dart';
 export 'src/model/failure.dart';

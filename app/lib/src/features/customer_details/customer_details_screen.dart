@@ -63,13 +63,18 @@ class _CustomerDetailsScreenState extends State<CustomerDetailsScreen> {
               child: Text('The customer has no credit cards assigned'),
             )
           : Expanded(
-              child: ListView.separated(
-                itemBuilder: (context, index) => CreditCardCard(
-                  creditCard: state.cards[index],
+              child: Padding(
+                padding: const EdgeInsets.only(
+                  left: Spacing.medium,
                 ),
-                itemCount: state.cards.length,
-                separatorBuilder: (_, __) => const SizedBox(
-                  height: Spacing.xsmall,
+                child: ListView.separated(
+                  itemBuilder: (context, index) => CreditCardLightCard(
+                    creditCard: state.cards[index],
+                  ),
+                  itemCount: state.cards.length,
+                  separatorBuilder: (_, __) => const SizedBox(
+                    height: Spacing.xsmall,
+                  ),
                 ),
               ),
             );

@@ -33,7 +33,7 @@ class CreditCardNetworkRepository implements CreditCardRepository {
   }
 
   @override
-  Future<List<CreditCard>> fetchCustomerCreditCards({
+  Future<List<CreditCardLight>> fetchCustomerCreditCards({
     required String customerId,
   }) async {
     final response = await _networkClient.get(
@@ -51,6 +51,6 @@ class CreditCardNetworkRepository implements CreditCardRepository {
       utf8.decode(response.bodyBytes),
     );
 
-    return NetworkCreditCard.fromDynamicList(body['data']);
+    return NetworkCreditCardLight.fromDynamicList(body['data']);
   }
 }

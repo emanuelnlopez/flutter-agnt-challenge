@@ -6,7 +6,7 @@ part 'customer_details_view_state.freezed.dart';
 @freezed
 class CustomerDetailsViewState with _$CustomerDetailsViewState {
   const factory CustomerDetailsViewState.success({
-    required List<CreditCard> cards,
+    required List<CreditCardLight> cards,
   }) = CustomerDetailsViewStateSuccess;
   const factory CustomerDetailsViewState.error({String? errorMessage}) =
       CustomerDetailsViewStateError;

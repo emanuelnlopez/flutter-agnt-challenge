@@ -1,18 +1,20 @@
 import 'package:domain/domain.dart';
 import 'package:json_class/json_class.dart';
 
-class NetworkCreditCard extends CreditCard {
-  NetworkCreditCard({
-    super.cvc,
+class NetworkCreditCardLight extends CreditCardLight {
+  NetworkCreditCardLight({
+    required super.brand,
+    required super.country,
     required super.expirationMonth,
     required super.expirationYear,
     required super.id,
-    super.name,
-    required super.number,
+    required super.last4,
   });
 
-  factory NetworkCreditCard.fromDynamic(dynamic map) => NetworkCreditCard(
-        cvc: map[_AttributesKeys.cvc],
+  factory NetworkCreditCardLight.fromDynamic(dynamic map) =>
+      NetworkCreditCardLight(
+        brand: map[_AttributesKeys.brand],
+        country: map[_AttributesKeys.country],
         expirationMonth: JsonClass.parseInt(
           map[_AttributesKeys.expirationMonth],
         )!,
@@ -20,16 +22,15 @@ class NetworkCreditCard extends CreditCard {
           map[_AttributesKeys.expirationYear],
         )!,
         id: map[_AttributesKeys.id],
-        name: map[_AttributesKeys.name],
-        number: map[_AttributesKeys.number],
+        last4: map[_AttributesKeys.last4],
       );
 
-  static List<NetworkCreditCard> fromDynamicList(dynamic list) {
-    final result = <NetworkCreditCard>[];
+  static List<NetworkCreditCardLight> fromDynamicList(dynamic list) {
+    final result = <NetworkCreditCardLight>[];
 
     if (list != null) {
       for (dynamic map in list) {
-        result.add(NetworkCreditCard.fromDynamic(map));
+        result.add(NetworkCreditCardLight.fromDynamic(map));
       }
     }
 
@@ -38,10 +39,10 @@ class NetworkCreditCard extends CreditCard {
 }
 
 class _AttributesKeys {
-  static const String cvc = 'cvc';
+  static const String brand = 'brand';
+  static const String country = 'country';
   static const String expirationMonth = 'exp_month';
   static const String expirationYear = 'exp_year';
   static const String id = 'id';
-  static const String name = 'name';
-  static const String number = 'last4';
+  static const String last4 = 'last4';
 }

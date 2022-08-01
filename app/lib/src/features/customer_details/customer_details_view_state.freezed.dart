@@ -18,7 +18,7 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$CustomerDetailsViewState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(List<CreditCard> cards) success,
+    required TResult Function(List<CreditCardLight> cards) success,
     required TResult Function(String? errorMessage) error,
     required TResult Function() initial,
     required TResult Function(String? message) loading,
@@ -26,7 +26,7 @@ mixin _$CustomerDetailsViewState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(List<CreditCard> cards)? success,
+    TResult Function(List<CreditCardLight> cards)? success,
     TResult Function(String? errorMessage)? error,
     TResult Function()? initial,
     TResult Function(String? message)? loading,
@@ -34,7 +34,7 @@ mixin _$CustomerDetailsViewState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(List<CreditCard> cards)? success,
+    TResult Function(List<CreditCardLight> cards)? success,
     TResult Function(String? errorMessage)? error,
     TResult Function()? initial,
     TResult Function(String? message)? loading,
@@ -91,7 +91,7 @@ abstract class _$$CustomerDetailsViewStateSuccessCopyWith<$Res> {
           _$CustomerDetailsViewStateSuccess value,
           $Res Function(_$CustomerDetailsViewStateSuccess) then) =
       __$$CustomerDetailsViewStateSuccessCopyWithImpl<$Res>;
-  $Res call({List<CreditCard> cards});
+  $Res call({List<CreditCardLight> cards});
 }
 
 /// @nodoc
@@ -115,7 +115,7 @@ class __$$CustomerDetailsViewStateSuccessCopyWithImpl<$Res>
       cards: cards == freezed
           ? _value._cards
           : cards // ignore: cast_nullable_to_non_nullable
-              as List<CreditCard>,
+              as List<CreditCardLight>,
     ));
   }
 }
@@ -125,12 +125,12 @@ class __$$CustomerDetailsViewStateSuccessCopyWithImpl<$Res>
 class _$CustomerDetailsViewStateSuccess
     implements CustomerDetailsViewStateSuccess {
   const _$CustomerDetailsViewStateSuccess(
-      {required final List<CreditCard> cards})
+      {required final List<CreditCardLight> cards})
       : _cards = cards;
 
-  final List<CreditCard> _cards;
+  final List<CreditCardLight> _cards;
   @override
-  List<CreditCard> get cards {
+  List<CreditCardLight> get cards {
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_cards);
   }
@@ -161,7 +161,7 @@ class _$CustomerDetailsViewStateSuccess
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(List<CreditCard> cards) success,
+    required TResult Function(List<CreditCardLight> cards) success,
     required TResult Function(String? errorMessage) error,
     required TResult Function() initial,
     required TResult Function(String? message) loading,
@@ -172,7 +172,7 @@ class _$CustomerDetailsViewStateSuccess
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(List<CreditCard> cards)? success,
+    TResult Function(List<CreditCardLight> cards)? success,
     TResult Function(String? errorMessage)? error,
     TResult Function()? initial,
     TResult Function(String? message)? loading,
@@ -183,7 +183,7 @@ class _$CustomerDetailsViewStateSuccess
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(List<CreditCard> cards)? success,
+    TResult Function(List<CreditCardLight> cards)? success,
     TResult Function(String? errorMessage)? error,
     TResult Function()? initial,
     TResult Function(String? message)? loading,
@@ -236,10 +236,10 @@ class _$CustomerDetailsViewStateSuccess
 abstract class CustomerDetailsViewStateSuccess
     implements CustomerDetailsViewState {
   const factory CustomerDetailsViewStateSuccess(
-          {required final List<CreditCard> cards}) =
+          {required final List<CreditCardLight> cards}) =
       _$CustomerDetailsViewStateSuccess;
 
-  List<CreditCard> get cards;
+  List<CreditCardLight> get cards;
   @JsonKey(ignore: true)
   _$$CustomerDetailsViewStateSuccessCopyWith<_$CustomerDetailsViewStateSuccess>
       get copyWith => throw _privateConstructorUsedError;
@@ -315,7 +315,7 @@ class _$CustomerDetailsViewStateError implements CustomerDetailsViewStateError {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(List<CreditCard> cards) success,
+    required TResult Function(List<CreditCardLight> cards) success,
     required TResult Function(String? errorMessage) error,
     required TResult Function() initial,
     required TResult Function(String? message) loading,
@@ -326,7 +326,7 @@ class _$CustomerDetailsViewStateError implements CustomerDetailsViewStateError {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(List<CreditCard> cards)? success,
+    TResult Function(List<CreditCardLight> cards)? success,
     TResult Function(String? errorMessage)? error,
     TResult Function()? initial,
     TResult Function(String? message)? loading,
@@ -337,7 +337,7 @@ class _$CustomerDetailsViewStateError implements CustomerDetailsViewStateError {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(List<CreditCard> cards)? success,
+    TResult Function(List<CreditCardLight> cards)? success,
     TResult Function(String? errorMessage)? error,
     TResult Function()? initial,
     TResult Function(String? message)? loading,
@@ -444,7 +444,7 @@ class _$CustomerDetailsViewStateInitial
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(List<CreditCard> cards) success,
+    required TResult Function(List<CreditCardLight> cards) success,
     required TResult Function(String? errorMessage) error,
     required TResult Function() initial,
     required TResult Function(String? message) loading,
@@ -455,7 +455,7 @@ class _$CustomerDetailsViewStateInitial
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(List<CreditCard> cards)? success,
+    TResult Function(List<CreditCardLight> cards)? success,
     TResult Function(String? errorMessage)? error,
     TResult Function()? initial,
     TResult Function(String? message)? loading,
@@ -466,7 +466,7 @@ class _$CustomerDetailsViewStateInitial
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(List<CreditCard> cards)? success,
+    TResult Function(List<CreditCardLight> cards)? success,
     TResult Function(String? errorMessage)? error,
     TResult Function()? initial,
     TResult Function(String? message)? loading,
@@ -592,7 +592,7 @@ class _$CustomerDetailsViewStateLoading
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(List<CreditCard> cards) success,
+    required TResult Function(List<CreditCardLight> cards) success,
     required TResult Function(String? errorMessage) error,
     required TResult Function() initial,
     required TResult Function(String? message) loading,
@@ -603,7 +603,7 @@ class _$CustomerDetailsViewStateLoading
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(List<CreditCard> cards)? success,
+    TResult Function(List<CreditCardLight> cards)? success,
     TResult Function(String? errorMessage)? error,
     TResult Function()? initial,
     TResult Function(String? message)? loading,
@@ -614,7 +614,7 @@ class _$CustomerDetailsViewStateLoading
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(List<CreditCard> cards)? success,
+    TResult Function(List<CreditCardLight> cards)? success,
     TResult Function(String? errorMessage)? error,
     TResult Function()? initial,
     TResult Function(String? message)? loading,

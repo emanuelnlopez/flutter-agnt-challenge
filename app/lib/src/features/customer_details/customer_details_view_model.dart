@@ -42,5 +42,9 @@ class CustomerDetailsViewModel extends ViewModel<CustomerDetailsViewState> {
         'customer': customer,
       },
     );
+
+    if (shouldRefresh == true) {
+      fetchCustomerCreditCards(customerId: customer.id!);
+    }
   }
 }

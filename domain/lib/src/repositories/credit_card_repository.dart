@@ -6,7 +6,7 @@ abstract class CreditCardRepository {
     required String customerId,
   });
 
-  Future<List<CreditCard>> fetchCustomerCreditCards({
+  Future<List<CreditCardLight>> fetchCustomerCreditCards({
     required String customerId,
   });
 }

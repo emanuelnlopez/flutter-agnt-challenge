@@ -1,4 +1,4 @@
-export 'credit_card_card.dart';
+export 'credit_card_light_card.dart';
 export 'customer_card.dart';
 export 'default_dialog.dart';
 export 'error_screen.dart';
