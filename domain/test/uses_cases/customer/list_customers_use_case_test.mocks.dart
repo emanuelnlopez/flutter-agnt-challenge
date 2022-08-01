@@ -19,11 +19,6 @@ import 'package:mockito/mockito.dart' as _i1;
 // ignore_for_file: camel_case_types
 // ignore_for_file: subtype_of_sealed_class
 
-class _FakeCustomer_0 extends _i1.SmartFake implements _i2.Customer {
-  _FakeCustomer_0(Object parent, Invocation parentInvocation)
-      : super(parent, parentInvocation);
-}
-
 /// A class which mocks [CustomerRepository].
 ///
 /// See the documentation for Mockito's code generation for more information.
@@ -44,10 +39,4 @@ class MockCustomerRepository extends _i1.Mock
           Invocation.method(#listCustomers, []),
           returnValue: _i3.Future<List<_i2.Customer>>.value(<_i2.Customer>[]))
       as _i3.Future<List<_i2.Customer>>);
-  @override
-  _i3.Future<_i2.Customer> customerDetails(String? customerId) =>
-      (super.noSuchMethod(Invocation.method(#customerDetails, [customerId]),
-              returnValue: _i3.Future<_i2.Customer>.value(_FakeCustomer_0(
-                  this, Invocation.method(#customerDetails, [customerId]))))
-          as _i3.Future<_i2.Customer>);
 }
