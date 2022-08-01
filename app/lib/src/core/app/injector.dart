@@ -39,6 +39,7 @@ class DefaultInjector implements Injector {
   late CreateCreditCardUseCase _createCreditCardUseCase;
   late CreateCustomerUseCase _createCustomerUseCase;
   late Config _config;
+  late FetchCustomerCreditCardsUseCase _fetchCustomerCreditCardsUseCase;
   bool _initialized = false;
   late ListCustomersUseCase _listCustomersUseCase;
 
@@ -69,6 +70,7 @@ class DefaultInjector implements Injector {
   @override
   CustomerDetailsViewModel get customerDetailsViewModel =>
       CustomerDetailsViewModel(
+        fetchCustomerCreditCardsUseCase: _fetchCustomerCreditCardsUseCase,
         navigatorKey: _navigatorKey,
       );
 
@@ -107,6 +109,10 @@ class DefaultInjector implements Injector {
       );
 
       _logger.finest('Creating use cases…');
+
+      _fetchCustomerCreditCardsUseCase = FetchCustomerCreditCardsUseCase(
+        creditCardRepository: creditCardRepository,
+      );
 
       _createCreditCardUseCase = CreateCreditCardUseCase(
         creditCardRepository: creditCardRepository,

@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:io';
 
 import 'package:data/data.dart';
@@ -29,5 +30,27 @@ class CreditCardNetworkRepository implements CreditCardRepository {
     if (response.statusCode != HttpStatus.ok) {
       throw Exception();
     }
+  }
+
+  @override
+  Future<List<CreditCard>> fetchCustomerCreditCards({
+    required String customerId,
+  }) async {
+    final response = await _networkClient.get(
+      FetchCustomerCreditCardsRequest(
+        customerId: customerId,
+        url: _endpoints.creditCardsUrl,
+      ),
+    );
+
+    if (response.statusCode != HttpStatus.ok) {
+      throw Exception();
+    }
+
+    final body = json.decode(
+      utf8.decode(response.bodyBytes),
+    );
+
+    return NetworkCreditCard.fromDynamicList(body['data']);
   }
 }

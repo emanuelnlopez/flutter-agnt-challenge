@@ -3,11 +3,11 @@ import 'package:json_class/json_class.dart';
 
 class NetworkCreditCard extends CreditCard {
   NetworkCreditCard({
-    required super.cvc,
+    super.cvc,
     required super.expirationMonth,
     required super.expirationYear,
     required super.id,
-    required super.name,
+    super.name,
     required super.number,
   });
 
@@ -39,9 +39,9 @@ class NetworkCreditCard extends CreditCard {
 
 class _AttributesKeys {
   static const String cvc = 'cvc';
-  static const String expirationMonth = 'expirationMonth';
-  static const String expirationYear = 'expirationYear';
+  static const String expirationMonth = 'exp_month';
+  static const String expirationYear = 'exp_year';
   static const String id = 'id';
   static const String name = 'name';
-  static const String number = 'number';
+  static const String number = 'last4';
 }

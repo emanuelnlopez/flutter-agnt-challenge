@@ -40,10 +40,10 @@ class _ListCustomersScreenState extends State<ListCustomersScreen> {
               customer,
             ),
           ),
+          itemCount: state.customers.length,
           separatorBuilder: (_, __) => const SizedBox(
             height: Spacing.xsmall,
           ),
-          itemCount: state.customers.length,
         );
       } else {
         result = Center(
