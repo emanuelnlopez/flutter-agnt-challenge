@@ -9,8 +9,9 @@ class FetchCustomerCreditCardsUseCase extends UseCase<List<CreditCardLight>> {
   final CreditCardRepository _creditCardRepository;
 
   @override
-  Future<Either<Failure, List<CreditCardLight>>> execute(
-      {required Map<String, dynamic> arguments}) async {
+  Future<Either<Failure, List<CreditCardLight>>> execute({
+    required Map<String, dynamic> arguments,
+  }) async {
     try {
       final result = await _creditCardRepository.fetchCustomerCreditCards(
         customerId:

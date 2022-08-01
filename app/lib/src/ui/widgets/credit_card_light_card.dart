@@ -17,7 +17,8 @@ class CreditCardLightCard extends StatelessWidget {
           Text('Brand: ${creditCard.brand}'),
           Text('Card number: XXXX XXXX XXXX ${creditCard.last4}'),
           Text(
-              'Expiration date: ${creditCard.expirationMonth}/${creditCard.expirationYear}'),
+            'Expiration date: ${creditCard.expirationMonth}/${creditCard.expirationYear}',
+          ),
         ],
       );
 }
