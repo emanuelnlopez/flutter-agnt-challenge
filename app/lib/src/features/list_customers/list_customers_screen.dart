@@ -72,7 +72,7 @@ class _ListCustomersScreenState extends State<ListCustomersScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Client list'),
+        title: Text('Customer list'),
       ),
       body: ChangeNotifierProvider<ListCustomersViewModel>(
         create: (_) => _viewModel,
